@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, shrink-to-fit=no">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="icon" href="ftp.png"  >
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>ftp.myinfinity.in</title>
+  </head>
+  <body>
+
+
+  	<script type="text/javascript">
+  		var userID,password,server;
+swal("Username:", {
+  content: "input"
+})
+.then((value) => {
+	if(value===""){
+		userID="anonymous"
+	}else{
+	userID=value;}
+  swal(
+"Password:",{
+  content: {
+    element: "input",
+    attributes: {
+      placeholder: "Type your password",
+      type: "password",
+    },
+  },
+}
+
+
+
+    )
+.then((value) => {if(value===""){
+		password="anonymous"
+	}else{
+	password=value;}
+var ftpwww = "ftp://" + userID + ":" + password + "@" + "ftp.myinfinity.in";
+window.location = ftpwww;
+});
+
+
+});
+  	</script>
+
+    
+    
+  </body>
+</html>
